@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Sofia+Sans:300,400,300italic,400italic");
+@import url("https://fonts.googleapis.com/css?family=Fredoka:300,400,300italic,400italic");
 @import url("fontawesome-all.min.css");
 
 html, body, div, span, applet, object,
@@ -1300,12 +1300,31 @@ input, select, textarea {
 	}
 
 	body {
-		background-image: url("images/overlay.png"), url("images/1.jpeg");
+		background-image: var(--gradient);
 		/*background-image: url("images/1.jpeg");*/
 		background-repeat: repeat, no-repeat;
-		background-size: auto, 100% 100%;
+		background-size: 800% ;
 		background-attachment: fixed;
 		overflow-y: scroll;
+		animation: bg-animation 150s infinite alternate;
+	}
+
+	@keyframes bg-animation {
+		0% {
+			background-position: left;
+		}
+		50% {
+			background-position: right;
+		}
+		75% {
+			background-position: center;
+		}
+		85%{
+			background-position: bottom;
+		}
+		100% {
+			background-position: top;
+		}
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1320,7 +1339,7 @@ input, select, textarea {
 		}
 
 	body, input, textarea, select {
-		font-family: 'Sofia Sans', sans-serif;
+		font-family: 'Fredoka', sans-serif;
 		font-weight: 400;
 		color: #0c2337;
 		font-size: 20pt;
@@ -1377,7 +1396,7 @@ input, select, textarea {
 	}
 
 	h2 {
-		font-size: 1.8em;
+		font-size: 1.6em;
 		letter-spacing: -0.015em;
 	}
 
@@ -1403,7 +1422,7 @@ input, select, textarea {
 	}
 
 	blockquote {
-		border-left: solid 0.3em #ddd;
+		/*border-left: solid 0.3em bisque;*/
 		padding: 1em 0 1em 2em;
 		font-style: italic;
 		font-size: 0.8em;
@@ -1418,7 +1437,8 @@ input, select, textarea {
 		font-size: 0.8em;
 	}
 
-	em { color: rebeccapurple;}
+	em { color: seashell;}
+	em.dark { color: #235988;}
 
 	hr {
 		border: 0;
@@ -1443,7 +1463,7 @@ input, select, textarea {
 		clear: both;
 	}
 
-	p, ul, ol, dl, table, blockquote, form {
+	p, ul, ol, dl, table, blockquote, form, header {
 		margin-bottom: 2em;
 	}
 
@@ -1556,6 +1576,16 @@ input, select, textarea {
 
 /* Image */
 
+:root {
+	--gradient: linear-gradient(68.1deg,
+	rgba(184, 44, 93, 0.57) 12.2%,
+	rgba(250, 129, 11, 0.65) 25%,
+	rgba(248, 186, 34, 0.65) 43.4%,
+	rgba(49, 131, 49, 0.61) 58.2%,
+	rgba(39, 81, 166, 0.62) 88.1%,
+	rgb(111, 96, 165,0.65) 97%);
+}
+
 	.image {
 		display: inline-block;
 	}
@@ -1568,6 +1598,12 @@ input, select, textarea {
 		.image.fit {
 			display: block;
 			width: 100%;
+			background-color: cadetblue;
+			color: #235988;
+			background-size: cover;
+			padding: 1em;
+			text-decoration: none;
+			text-wrap: nowrap;
 		}
 
 		.image.featured {
@@ -1788,7 +1824,7 @@ input, select, textarea {
 		#nav a {
 			position: relative;
 			display: inline-block;
-			color: #ffffff;
+			color: seashell;
 			width: 1em;
 			height: 1em;
 			line-height: 0.9em;
@@ -1815,9 +1851,9 @@ input, select, textarea {
 				display: block;
 				position: absolute;
 				left: 50%;
-				bottom: -0.75em;
+				bottom: -0.71em;
 				margin-left: -0.5em;
-				border-bottom: solid 0em #ffffff;
+				border-bottom: solid 0em seashell;
 				border-left: solid 0.5em transparent;
 				border-right: solid 0.5em transparent;
 				-moz-transition: border-bottom-width .25s ease-in-out;
@@ -1830,7 +1866,7 @@ input, select, textarea {
 				display: block;
 				position: absolute;
 				background: #222222;
-				color: #ffffff;
+				color: seashell;
 				top: -2.75em;
 				font-size: 0.3em;
 				height: 2.25em;
@@ -1957,8 +1993,9 @@ input, select, textarea {
 		position: relative;
 		overflow: hidden;
 		width: 100%;
-		background: #FFB005;
+		background: rgba(236, 234, 255, 0.59);
 		box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
+		border-radius: 20px 20px 20px 20px;
 		-moz-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
 		-webkit-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
 		-ms-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
@@ -2195,7 +2232,7 @@ input, select, textarea {
 
 		#footer a {
 			color: #ddd;
-			color: rgba(255, 255, 255, 0.65);
+			color: rgba(255, 255, 255, 0.85);
 			-moz-transition: color .25s ease-in-out;
 			-webkit-transition: color .25s ease-in-out;
 			-ms-transition: color .25s ease-in-out;
