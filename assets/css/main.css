@@ -178,10 +178,10 @@ input, select, textarea {
 
 .closebtn {
 	margin-left: 15px;
-	color: white;
+	color: #e9a4ec;
 	font-weight: bold;
 	float: right;
-	font-size: 1.25em;
+	font-size: 1em;
 	line-height: 1.5em;
 	cursor: pointer;
 	transition: 0.3s;
@@ -2405,6 +2405,23 @@ input, select, textarea {
 		}
 a {
 	text-decoration: none;
-	color: #9b6bef;
+	color: darkorchid;
 	cursor: pointer;
+}
+
+a:hover {
+	color: #363636;
+	cursor: pointer;
+}
+
+a:active {
+	color: #444444;
+}
+
+.alert a	{
+	color: #9b6bef;
+}
+
+.alert a:hover	{
+	color: darkorchid;
 }
