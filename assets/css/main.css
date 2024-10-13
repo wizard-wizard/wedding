@@ -2425,3 +2425,11 @@ a:active {
 .alert a:hover	{
 	color: darkorchid;
 }
+
+.fa-chevron-left {
+	float: left;
+}
+
+.fa-chevron-right {
+	float: right;
+}
